@@ -18,3 +18,6 @@
 
 ### Giao diện Giỏ hàng
 ![image](https://media.discordapp.net/attachments/1081505386487611472/1182313328924696576/image.png?ex=65843e17&is=6571c917&hm=6968792c00f2fd81e075115e1e038abf59781dd8ac7cabbfbddcd9e880a8ad67&=&format=webp&quality=lossless&width=1440&height=471)
+
+### Giao diện Thông tin cá nhân
+![image](https://media.discordapp.net/attachments/1081505386487611472/1182313268765790289/image.png?ex=65843e09&is=6571c909&hm=23e417f06f30d1eea7b78db7c76c30e2530a67a22400ab07519934630f4a1f43&=&format=webp&quality=lossless&width=1440&height=567)
