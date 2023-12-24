@@ -2148,6 +2148,7 @@
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Data\LoginAccount.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2206,6 +2207,7 @@
     <Content Include="Views\Home\DropdownCategories.cshtml" />
     <Content Include="Views\Home\SearchBox.cshtml" />
     <Content Include="Views\Home\SelectOptionSize.cshtml" />
+    <Content Include="Views\Product\ProductDetail.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
