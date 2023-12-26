@@ -1,6 +1,6 @@
-﻿@{ 
+﻿@*@{ 
     StoreForFashion.Models.TaiKhoanQuanTri tk = (StoreForFashion.Models.TaiKhoanQuanTri) HttpContext.Current.Session[StoreForFashion.Session.ConstaintUser.ADMIN_SESSION];
-}
+}*@
 
 <!DOCTYPE html>
 <html lang="en">
@@ -56,7 +56,7 @@
                                     <img src="~/Assets/Admin/assets/img/team/profile-picture-3.jpg" class="card-img-top rounded-circle border-white" alt="Bonnie Green">
                                 </div>
                                 <div class="d-block">
-                                    <h2 class="h6">Hi, @tk.HoTen</h2>
+                                    @*<h2 class="h6">Hi, @tk.HoTen</h2>*@
                                     <a href="@Url.Action("Logout","Login")" class="btn btn-secondary text-dark btn-xs"><span class="mr-2"><span class="fas fa-sign-out-alt"></span></span>Đăng xuất</a>
                                 </div>
                             </div>
@@ -91,15 +91,15 @@
                                     <span>Hóa đơn</span>
                                 </a>
                             </li>
-                            @if (tk.LoaiTaiKhoan == true)
-                            {
+                            @*@if (tk.LoaiTaiKhoan == true)*@
+                            @*{*@
                                 <li class='nav-item  @(ViewContext.RouteData.Values["controller"].ToString() == "AdminUser"? "active" : "") '>
                                     <a href="@Url.Action("Index","AdminUser")" class="nav-link">
                                         <span class="sidebar-icon"><span class="fas fa-user-alt"></span></span>
                                         <span>Tài khoản quản trị</span>
                                     </a>
                                 </li>
-                            }
+                            @*}*@
                             <li class='nav-item  @(ViewContext.RouteData.Values["controller"].ToString() == "ClientUser"? "active" : "") '>
                                 <a href="@Url.Action("Index","ClientUser")" class="nav-link">
                                     <span class="sidebar-icon"><span class="fas fa-user-friends"></span></span>
@@ -124,7 +124,7 @@
                                             <div class="media d-flex align-items-center">
                                                 <img class="user-avatar md-avatar rounded-circle" alt="Image placeholder" src="~/Assets/Admin/assets/img/team/profile-picture-3.jpg">
                                                 <div class="media-body ml-2 text-dark align-items-center d-none d-lg-block">
-                                                    <span class="mb-0 font-small font-weight-bold">@tk.HoTen</span>
+                                                    @*<span class="mb-0 font-small font-weight-bold">@tk.HoTen</span>*@
                                                 </div>
                                             </div>
                                         </a>
