@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
 using StoreForFashion.Models;
 
 namespace StoreForFashion.Controllers
@@ -14,6 +15,23 @@ namespace StoreForFashion.Controllers
     {
         private StoreForFashionDB db = new StoreForFashionDB();
 
+        public ActionResult Shop(string searchString, int? madm, int page = 1, int pageSize = 9)
+        {
+            ViewBag.searchString = searchString;
+            ViewBag.madm = madm;
+            var sanphams = db.SanPhams.Select(p => p);
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                sanphams = sanphams.Where(sp => sp.TenSP.Contains(searchString));
+            }
+            if (madm != null && madm != 0)
+            {
+                sanphams = sanphams.Where(s => s.MaDM == madm);
+                ViewBag.DanhMuc = db.DanhMucs.Where(d => d.MaDM == madm).FirstOrDefault();
+            }
+            return View(sanphams.OrderBy(sp => sp.MaSP).ToPagedList(page, pageSize));
+        }
+
         public ActionResult ProductDetail(int id)
         {
             SanPham sp = db.SanPhams.Include("DanhMuc").Where(s => s.MaSP.Equals(id)).FirstOrDefault();
@@ -21,6 +39,20 @@ namespace StoreForFashion.Controllers
             ViewBag.SPCT = list;
             ViewBag.Exitst = list[0];
             return View(sp);
+        }
+
+        [HttpPost]
+        public JsonResult Index(int id)
+        {
+            SanPham sp = db.SanPhams.Include("DanhMuc").Include("SanPhamChiTiets").Where(s => s.MaSP.Equals(id)).FirstOrDefault();
+            return Json(sp, JsonRequestBehavior.AllowGet);
+        }
+
+        [HttpPost]
+        public JsonResult Detail(int id)
+        {
+            SanPhamChiTiet spct = db.SanPhamChiTiets.Where(sp => sp.IDCTSP == id).FirstOrDefault();
+            return Json(spct, JsonRequestBehavior.AllowGet);
         }
     }
 }
