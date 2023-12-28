@@ -13,17 +13,17 @@ namespace StoreForFashion.Areas.Admin.Controllers
         // GET: Admin/Base
         protected override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            var session = Session[ConstaintUser.ADMIN_SESSION];
-            if (session == null)
-            {
-                filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
-                {
-                    Controller = "Login",
-                    Action = "Index",
-                    Area = "Admin"
-                }));
-            }
-            base.OnActionExecuting(filterContext);
+            //var session = Session[ConstaintUser.ADMIN_SESSION];
+            //if (session == null)
+            //{
+            //    filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new
+            //    {
+            //        Controller = "Login",
+            //        Action = "Index",
+            //        Area = "Admin"
+            //    }));
+            //}
+            //base.OnActionExecuting(filterContext);
         }
     }
 }
