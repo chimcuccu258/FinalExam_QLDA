@@ -9,7 +9,7 @@ using System.Web.Mvc;
 
 namespace StoreForFashion.Areas.Admin.Controllers
 {
-    public class ClientUserController : Controller
+    public class ClientUserController : BaseController
     {
         // GET: Admin/ClientUser
         StoreForFashionDB db = new StoreForFashionDB();
