@@ -2151,6 +2151,7 @@
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Areas\Admin\Controllers\BillController.cs" />
     <Compile Include="Areas\Admin\Data\LoginAccount.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\BillController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
@@ -2213,6 +2214,9 @@
     <Content Include="Views\Home\SearchBox.cshtml" />
     <Content Include="Views\Home\SelectOptionSize.cshtml" />
     <Content Include="Views\Product\ProductDetail.cshtml" />
+    <Content Include="Views\Cart\Orders.cshtml" />
+    <Content Include="Views\Product\Shop.cshtml" />
+    <Content Include="Views\Cart\CheckOut.cshtml" />
     <Content Include="Views\Bill\Details.cshtml" />
     <Content Include="Views\Bill\ListBills.cshtml" />
     <None Include="Web.Debug.config">
