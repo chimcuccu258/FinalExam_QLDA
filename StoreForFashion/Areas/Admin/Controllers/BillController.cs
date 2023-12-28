@@ -56,7 +56,7 @@ namespace StoreForFashion.Areas.Admin.Controllers
         {
             try
             {
-                TaiKhoanQuanTri tk = (TaiKhoanQuanTri)Session[Nhom9.Session.ConstaintUser.ADMIN_SESSION];
+                TaiKhoanQuanTri tk = (TaiKhoanQuanTri)Session[StoreForFashion.Session.ConstaintUser.ADMIN_SESSION];
                 HoaDon hd = db.HoaDons.Where(x => x.MaHD == mahd).FirstOrDefault();
                 hd.TrangThai = stt;
                 hd.NguoiSua = tk.HoTen;
