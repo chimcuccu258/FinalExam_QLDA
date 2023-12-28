@@ -2128,6 +2128,7 @@
     <Content Include="Areas\Admin\Views\Bill\Index.cshtml" />
     <Content Include="Areas\Admin\Views\ClientUser\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Category\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminUser\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2150,6 +2151,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdminUserController.cs" />
     <Compile Include="Areas\Admin\Controllers\BaseController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\ClientUserController.cs" />
@@ -2238,7 +2240,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Views\AdminUser\" />
     <Folder Include="Areas\Admin\Views\Base\" />
     <Folder Include="Assets\Admin\vendor\chartist\dist\scss\settings\" />
     <Folder Include="Assets\Admin\vendor\fortawesome\fontawesome-free\less\" />
